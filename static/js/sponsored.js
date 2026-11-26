@@ -14,6 +14,12 @@
  * a condition for anything, and it does not unlock the destination.
  */
 (function () {
+  // document.currentScript is only set while this script is executing.
+  // Capture it now: by the time load() runs (DOMContentLoaded), it is null,
+  // and the relative fallback would resolve against the page URL and 404.
+  var scriptEl = document.currentScript
+    || document.querySelector('script[src*="sponsored.js"]');
+
   function pick(messages) {
     return messages[Math.floor(Math.random() * messages.length)];
   }
@@ -33,10 +39,9 @@
   }
 
   function load() {
-    var script = document.currentScript;
     var jsonUrl = 'sponsored-messages.json';
-    if (script && script.src) {
-      jsonUrl = script.src.replace(/sponsored\.js.*$/, 'sponsored-messages.json');
+    if (scriptEl && scriptEl.src) {
+      jsonUrl = scriptEl.src.replace(/sponsored\.js.*$/, 'sponsored-messages.json');
     }
     fetch(jsonUrl)
       .then(function (resp) { return resp.json(); })

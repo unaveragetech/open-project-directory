@@ -64,6 +64,20 @@ def test_sponsored_js_loads_json_and_keeps_fallback():
     assert "catch" in js  # failure keeps the static "Sponsored" text
 
 
+def test_sponsored_js_captures_script_tag_up_front():
+    # Regression: document.currentScript is null by the time the
+    # DOMContentLoaded handler runs, so reading it inside load() made
+    # the JSON fetch resolve relative to the page URL and 404 on every
+    # project page — the link stayed on the static "Sponsored" text.
+    # The script element must be captured while the script executes.
+    js = open(SPONSORED_JS, encoding="utf-8").read()
+    assert "document.currentScript" in js
+    assert "scriptEl" in js
+    assert "scriptEl.src" in js
+    assert 'querySelector(\'script[src*="sponsored.js"]\')' in js or \
+        'querySelector("script[src*=\\"sponsored.js\\"]")' in js
+
+
 def test_placements_renders_sub_slot():
     from src.advertising.placements import render_sponsored_link
     html = render_sponsored_link()
