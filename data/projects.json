@@ -177,6 +177,36 @@
         "games",
         "open-source"
       ]
+    },
+    {
+      "name": "PagesXcrawler",
+      "slug": "pagesxcrawler",
+      "website_url": "https://unaveragetech.github.io/PagesXcrawler",
+      "documentation_url": "https://github.com/unaveragetech/PagesXcrawler",
+      "repository_url": "https://github.com/unaveragetech/PagesXcrawler",
+      "creator": "Jesse",
+      "description": "Crawls websites and shows a results dashboard of pages, links, images, JS files, CSS files and media, with content metrics per page.",
+      "category": [
+        "Developer Tools"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://unaveragetech.github.io/PagesXcrawler",
+        "https://github.com/unaveragetech/PagesXcrawler"
+      ],
+      "tags": [
+        "developer-tools",
+        "open-source"
+      ]
     }
   ]
 }
