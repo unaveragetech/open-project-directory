@@ -267,6 +267,36 @@
         "media",
         "open-source"
       ]
+    },
+    {
+      "name": "Sysinfo",
+      "slug": "sysinfo",
+      "website_url": "https://unaveragetech.github.io/Sysinfo",
+      "documentation_url": "https://github.com/unaveragetech/Sysinfo",
+      "repository_url": "https://github.com/unaveragetech/Sysinfo",
+      "creator": "Jesse",
+      "description": "Real-time system information scanner for your browser \u2014 browser, display, hardware, GPU, network, battery, permissions, storage and media capabilities, shareable as an API.",
+      "category": [
+        "Utilities"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://unaveragetech.github.io/Sysinfo",
+        "https://github.com/unaveragetech/Sysinfo"
+      ],
+      "tags": [
+        "utilities",
+        "open-source"
+      ]
     }
   ]
 }
