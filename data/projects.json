@@ -609,6 +609,156 @@
         "ce",
         "open-source"
       ]
+    },
+    {
+      "name": "Football Simulator",
+      "slug": "football-simulator",
+      "website_url": "https://github.com/unaveragetech/football-simulator",
+      "documentation_url": "https://github.com/unaveragetech/football-simulator",
+      "repository_url": "https://github.com/unaveragetech/football-simulator",
+      "creator": "Jesse",
+      "description": "Text-based football simulation game: two teams of 53 players compete with dynamic gameplay including substitutions based on health and performance.",
+      "category": [
+        "Games"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://github.com/unaveragetech/football-simulator",
+        "https://github.com/unaveragetech/football-simulator"
+      ],
+      "tags": [
+        "games",
+        "open-source"
+      ]
+    },
+    {
+      "name": "IDE.OLLAMA",
+      "slug": "ide-ollama",
+      "website_url": "https://github.com/unaveragetech/IDE.OLLAMA",
+      "documentation_url": "https://github.com/unaveragetech/IDE.OLLAMA",
+      "repository_url": "https://github.com/unaveragetech/IDE.OLLAMA",
+      "creator": "Jesse",
+      "description": "Community IDE project built around Ollama: a development environment for working with local large language models, with system documentation and further reading.",
+      "category": [
+        "Developer Tools"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://github.com/unaveragetech/IDE.OLLAMA",
+        "https://github.com/unaveragetech/IDE.OLLAMA"
+      ],
+      "tags": [
+        "developer-tools",
+        "open-source"
+      ]
+    },
+    {
+      "name": "Gitbot",
+      "slug": "gitbot",
+      "website_url": "https://github.com/unaveragetech/Gitbot",
+      "documentation_url": "https://github.com/unaveragetech/Gitbot",
+      "repository_url": "https://github.com/unaveragetech/Gitbot",
+      "creator": "Jesse",
+      "description": "Query a large language model through GitHub Actions: fork the repo, pick a model, and open an issue with the model as the title to get a response.",
+      "category": [
+        "Developer Tools"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://github.com/unaveragetech/Gitbot",
+        "https://github.com/unaveragetech/Gitbot"
+      ],
+      "tags": [
+        "developer-tools",
+        "open-source"
+      ]
+    },
+    {
+      "name": "Rxelon",
+      "slug": "rxelon",
+      "website_url": "https://github.com/unaveragetech/Rxelon",
+      "documentation_url": "https://github.com/unaveragetech/Rxelon",
+      "repository_url": "https://github.com/unaveragetech/Rxelon",
+      "creator": "Jesse",
+      "description": "Decentralized compute network for AI inference with inbuilt security: nodes contribute compute through a central hub system.",
+      "category": [
+        "AI"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://github.com/unaveragetech/Rxelon",
+        "https://github.com/unaveragetech/Rxelon"
+      ],
+      "tags": [
+        "ai",
+        "open-source"
+      ]
+    },
+    {
+      "name": "Screen Streaming",
+      "slug": "screen-streaming",
+      "website_url": "https://github.com/unaveragetech/sharemyscreen",
+      "documentation_url": "https://github.com/unaveragetech/sharemyscreen",
+      "repository_url": "https://github.com/unaveragetech/sharemyscreen",
+      "creator": "Jesse",
+      "description": "Stream your PC screen in real time through a web interface, with user registration, login, settings management, and adjustable streaming quality.",
+      "category": [
+        "Utilities"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://github.com/unaveragetech/sharemyscreen",
+        "https://github.com/unaveragetech/sharemyscreen"
+      ],
+      "tags": [
+        "utilities",
+        "open-source"
+      ]
     }
   ]
 }
