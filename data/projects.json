@@ -1093,6 +1093,39 @@
         "developer-tools",
         "open-source"
       ]
+    },
+    {
+      "name": "Left Unsaid",
+      "slug": "left-unsaid",
+      "website_url": "https://leftunsaid.app",
+      "documentation_url": "https://leftunsaid.app",
+      "repository_url": "",
+      "creator": "David Bykerk",
+      "description": "Left Unsaid is a social web app where people can post anonymously or under a nickname, browse conversations nearby, and join groups around shared interests. Visitors can browse without an account. Submitted on behalf of founder David Bykerk.",
+      "category": [
+        "Commu",
+        "ity"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 92,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://leftunsaid.app",
+        "https://leftunsaid.app"
+      ],
+      "tags": [
+        "commu",
+        "ity",
+        "api",
+        "open-source"
+      ]
     }
   ]
 }
