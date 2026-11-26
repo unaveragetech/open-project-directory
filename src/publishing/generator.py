@@ -7,6 +7,8 @@ Outputs:
                                    docs/ADSTERRA_COMPLIANCE.md)
   site/expedited-review/index.html expedited-review page (see
                                    config/expedited_review.yml — PROPOSED tiers)
+  site/agents/index.html           For Agents page (raw HTTPS access + ad rule)
+  site/catalog.json                full catalog as JSON, for agents and scripts
   site/static/                     copied CSS/JS
 """
 import argparse
@@ -80,7 +82,10 @@ def generate_site(data_path=DEFAULT_DATA, out_dir=DEFAULT_OUT,
     with open(os.path.join(out_dir, ".nojekyll"), "w", encoding="utf-8") as fh:
         fh.write("")
     counts = {"projects": 0, "profiles": 0, "interstitials": 0,
-              "expedited_pages": 0}
+              "expedited_pages": 0, "agents_pages": 0, "catalog": 0}
+
+    # Public site URL (used by the agents page and catalog links).
+    site_url = "https://unaveragetech.github.io" + base_path
 
     expedited = load_expedited_review()
     categories = sorted({c for p in projects for c in p.get("category", [])})
@@ -107,6 +112,49 @@ def generate_site(data_path=DEFAULT_DATA, out_dir=DEFAULT_OUT,
     with open(os.path.join(expedited_dir, "index.html"), "w", encoding="utf-8") as fh:
         fh.write(expedited_html)
     counts["expedited_pages"] = 1
+
+    # Machine-readable catalog for agents and scripts (see templates/agents.html).
+    # No ads live in this file — it is for discovery. The ad rule on the
+    # agents page says: when you show a project to a human, link to its
+    # profile page, which carries the sponsored slot.
+    catalog_entries = []
+    for p in projects:
+        slug = p["slug"]
+        catalog_entries.append({
+            "name": p["name"], "slug": slug,
+            "website_url": p["website_url"],
+            "description": p.get("description", ""),
+            "category": p.get("category", []),
+            "tags": p.get("tags", []),
+            "pricing": p.get("pricing", ""),
+            "open_source": p.get("open_source", False),
+            "creator": p.get("creator", ""),
+            "quality_score": p.get("quality_score"),
+            "last_verified": p.get("last_verified", ""),
+            "profile_url": f"{site_url}/project/{slug}/",
+            "go_url": f"{site_url}/go/{slug}/",
+            "documentation_url": p.get("documentation_url", ""),
+            "repository_url": p.get("repository_url", ""),
+        })
+    catalog = {"directory": "Open Project Directory",
+               "catalog_url": f"{site_url}/catalog.json",
+               "project_count": len(catalog_entries),
+               "projects": catalog_entries}
+    with open(os.path.join(out_dir, "catalog.json"), "w", encoding="utf-8") as fh:
+        json.dump(catalog, fh, indent=2)
+        fh.write("\n")
+    counts["catalog"] = 1
+
+    # For Agents page.
+    agents_dir = os.path.join(out_dir, "agents")
+    os.makedirs(agents_dir, exist_ok=True)
+    agents_html = env.get_template("agents.html").render(
+        projects=projects, base_path=base_path,
+        base_url=site_url, catalog_url=f"{site_url}/catalog.json",
+        contact_email=DIRECTORY_CONTACT_EMAIL)
+    with open(os.path.join(agents_dir, "index.html"), "w", encoding="utf-8") as fh:
+        fh.write(agents_html)
+    counts["agents_pages"] = 1
 
     for project in projects:
         slug = project["slug"]

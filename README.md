@@ -10,7 +10,7 @@
 
 ### Find verified internet projects — every listing inspected, scored and checked before it goes live.
 
-**[🔍 Browse the live directory](https://unaveragetech.github.io/open-project-directory/)** &nbsp;·&nbsp; **[➕ Submit a project](https://github.com/unaveragetech/open-project-directory/issues/new?template=submit-project.yml)** &nbsp;·&nbsp; **[⚡ Expedited review](https://unaveragetech.github.io/open-project-directory/expedited-review/)**
+**[🔍 Browse the live directory](https://unaveragetech.github.io/open-project-directory/)** &nbsp;·&nbsp; **[➕ Submit a project](https://github.com/unaveragetech/open-project-directory/issues/new?template=submit-project.yml)** &nbsp;·&nbsp; **[⚡ Expedited review](https://unaveragetech.github.io/open-project-directory/expedited-review/)** &nbsp;·&nbsp; **[🤖 For Agents](https://unaveragetech.github.io/open-project-directory/agents/)**
 
 </div>
 
