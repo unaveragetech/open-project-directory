@@ -361,6 +361,36 @@
         "developer-tools",
         "open-source"
       ]
+    },
+    {
+      "name": "Seaflare Market",
+      "slug": "seaflare-market",
+      "website_url": "https://unaveragetech.github.io/Seaflare-client-",
+      "documentation_url": "https://github.com/unaveragetech/Seaflare-client-",
+      "repository_url": "https://github.com/unaveragetech/Seaflare-client-",
+      "creator": "Jesse",
+      "description": "Seaflare Market \u2014 a Fabric 1.21.4 Minecraft client for DonutSMP that turns the server economy into a data problem: automated auction listings, region mapping and more.",
+      "category": [
+        "Games"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://unaveragetech.github.io/Seaflare-client-",
+        "https://github.com/unaveragetech/Seaflare-client-"
+      ],
+      "tags": [
+        "games",
+        "open-source"
+      ]
     }
   ]
 }
