@@ -80,3 +80,27 @@ def test_browser_uses_load_not_networkidle():
         "src", "inspection", "browser_inspector.py").read_text()
     assert 'wait_until="load"' in src
     assert 'wait_until="networkidle"' not in src
+
+
+def test_bot_challenge_uses_http_content():
+    # Regression from TokenBroker issue #2: Cloudflare showed the
+    # browser "Just a moment…", so content/functionality scored 0 even
+    # though the site is real (206 words via plain HTTP).
+    from src.inspection.browser_inspector import is_bot_challenge
+    assert is_bot_challenge("Just a moment...", "Checking your browser")
+    assert not is_bot_challenge("TokenBroker", "One API key. Every model.")
+    http = {"http_status": 200, "dns_ok": True, "https_ok": True}
+    browser = {"rendered": False, "empty_page": False, "placeholder": False,
+               "console_errors": ["e1", "e2"], "bot_challenge": True,
+               "http_content_words": 206}
+    docs = {"documentation": {"word_count": 512}}
+    meta = {"name": "TokenBroker", "website": "https://tokenbroker.org",
+            "description": "d", "category": ["AI", "Developer Tools"],
+            "creator": "Jesse",
+            "documentation": "https://unaveragetech.github.io/tokenbroker-docs/",
+            "pricing": "freemium", "flags": "Has a public API"}
+    result = score_inspection(http, browser, docs, meta)
+    assert result["components"]["content_quality"] == 1.0
+    assert result["components"]["functionality"] == 0.5
+    assert result["score"] >= 85
+    assert result["decision"] == "auto_approve"

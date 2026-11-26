@@ -240,6 +240,14 @@ def build_inspection_comment(submission, http_result, browser_result,
         f"Broken images: {len(browser_result.get('broken_images') or [])} · "
         f"Broken links: {len(browser_result.get('broken_links') or [])}",
     ]
+    if browser_result.get("bot_challenge"):
+        lines.append(
+            f"- ⚠️ Bot-check page: the browser was shown a bot-check "
+            f"(“{browser_result.get('title', '')}”); content was verified "
+            f"from the plain HTTP fetch instead "
+            f"({browser_result.get('http_content_words', 0)} words). "
+            f"Functionality is scored partial — JavaScript could not be "
+            f"verified through the challenge.")
     for err in browser_result.get("errors") or []:
         lines.append(f"- Browser error: {err}")
     doc = doc_result.get("documentation") or {}

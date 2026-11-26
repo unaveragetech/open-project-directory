@@ -54,10 +54,25 @@ def score_inspection(http_result, browser_result, doc_result, metadata):
     text_len = 0
     if doc_result.get("documentation"):
         text_len = doc_result["documentation"].get("word_count", 0)
-    components["content_quality"] = 1.0 if (browser_result.get("rendered") and not browser_result.get("empty_page") and not browser_result.get("placeholder")) else 0.0
+    # Bot-check pages are not the site: when the browser was shown one,
+    # the plain HTTP fetch (200+ words of real text) counts as the
+    # content evidence instead — the site is real, the challenge is
+    # just in front of it. Functionality is only partial in that case
+    # (JS could not be verified through the challenge).
+    bot_challenge = bool(browser_result.get("bot_challenge"))
+    http_words = browser_result.get("http_content_words") or 0
+    content_ok = (browser_result.get("rendered")
+                  and not browser_result.get("empty_page")
+                  and not browser_result.get("placeholder"))
+    if bot_challenge and http_words >= 50:
+        content_ok = True
+    components["content_quality"] = 1.0 if content_ok else 0.0
     components["documentation"] = 1.0 if text_len >= 200 else (0.5 if text_len > 0 else 0.0)
-    components["functionality"] = 1.0 if (browser_result.get("rendered") and not browser_result.get("console_errors")) else (
-        0.5 if browser_result.get("rendered") else 0.0)
+    if bot_challenge:
+        components["functionality"] = 0.5
+    else:
+        components["functionality"] = 1.0 if (browser_result.get("rendered") and not browser_result.get("console_errors")) else (
+            0.5 if browser_result.get("rendered") else 0.0)
     filled = sum(1 for f in ("name", "website", "description", "category", "creator")
                  if metadata.get(f))
     optional = sum(1 for f in ("documentation", "repository", "pricing")

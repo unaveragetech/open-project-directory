@@ -16,6 +16,45 @@ PLACEHOLDER_MARKERS = [
     "this domain is parked", "default web page", "lorem ipsum",
 ]
 
+# Pages that are not the site at all, but a bot-check in front of it
+# (Cloudflare "Just a moment…", etc.). A headless browser is often
+# shown these while a human visitor is not — the site behind them can
+# still be perfectly real, so this must be reported, not scored as an
+# empty page.
+BOT_CHALLENGE_MARKERS = [
+    "just a moment", "checking your browser", "verify you are human",
+    "attention required", "please verify", "security check",
+]
+
+
+def is_bot_challenge(title, body_text):
+    """True when the rendered page looks like a bot-check interstitial."""
+    text = f"{title or ''} {body_text or ''}".lower()
+    return any(marker in text for marker in BOT_CHALLENGE_MARKERS)
+
+
+def _http_content_words(url):
+    """Words of real text from a plain HTTP fetch (challenge bypass).
+
+    Used only when the browser was shown a bot-check page: the plain
+    fetch often reaches the real site. Returns 0 on any failure.
+    """
+    try:
+        import httpx
+        from bs4 import BeautifulSoup
+        with httpx.Client(timeout=15, follow_redirects=True,
+                          trust_env=False,
+                          headers={"User-Agent": "OpenProjectDirectory-Bot/1.0"}) as client:
+            response = client.get(url)
+            if response.status_code != 200:
+                return 0
+            soup = BeautifulSoup(response.text, "html.parser")
+            for tag in soup(["script", "style", "nav", "footer"]):
+                tag.decompose()
+            return len(soup.get_text(" ", strip=True).split())
+    except Exception:  # noqa: BLE001 - fallback only, never crash inspection
+        return 0
+
 
 def inspect_in_browser(url, screenshot_path=None, timeout_ms=30000):
     """Render url in headless Chromium. Returns a structured result dict."""
@@ -26,6 +65,7 @@ def inspect_in_browser(url, screenshot_path=None, timeout_ms=30000):
         "broken_images": [], "broken_links": [], "empty_page": False,
         "placeholder": False, "title": None, "screenshot": screenshot_path,
         "mobile_ok": False, "errors": [],
+        "bot_challenge": False, "http_content_words": 0,
     }
     safe, reason = check_url_safe(url)
     if not safe:
@@ -51,6 +91,19 @@ def inspect_in_browser(url, screenshot_path=None, timeout_ms=30000):
             result["http_status"] = response.status if response else None
             result["title"] = page.title()
             body_text = (page.inner_text("body") or "").strip()
+            if is_bot_challenge(result["title"], body_text):
+                # The challenge usually clears in a few seconds in a real
+                # browser; give it one chance, then record it honestly.
+                page.wait_for_timeout(8000)
+                body_text = (page.inner_text("body") or "").strip()
+                result["title"] = page.title()
+            result["bot_challenge"] = is_bot_challenge(
+                result["title"], body_text)
+            if result["bot_challenge"]:
+                result["http_content_words"] = _http_content_words(url)
+                result["errors"].append(
+                    "browser was shown a bot-check page; content verified "
+                    "from the plain HTTP fetch instead")
             result["rendered"] = bool(response and response.ok and len(body_text) > 50)
             lowered = body_text.lower()
             result["placeholder"] = any(m in lowered for m in PLACEHOLDER_MARKERS)
