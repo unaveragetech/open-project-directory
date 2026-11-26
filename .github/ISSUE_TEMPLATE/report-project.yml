@@ -1,0 +1,24 @@
+name: Report a Project
+description: Report a broken, misleading, or abusive listing.
+title: "[Report] "
+labels: ["needs-review"]
+body:
+  - type: input
+    id: project
+    attributes:
+      label: Project name or profile URL
+    validations:
+      required: true
+  - type: dropdown
+    id: reason
+    attributes:
+      label: Reason
+      options: [Broken link, Misleading description, Malware or phishing, Spam, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+    validations:
+      required: true

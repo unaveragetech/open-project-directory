@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open Project Directory — Verified internet projects</title>
+<meta name="description" content="A community-driven directory of verified internet services and projects. Search by name, description, category or tag.">
+<link rel="stylesheet" href="{{ base_path }}/static/css/main.css">
+</head>
+<body>
+<header>
+  <h1>Open Project Directory</h1>
+  <p>Verified internet projects, discovered and checked automatically.</p>
+  <nav><a href="{{ base_path }}/expedited-review/">Expedited Review — speed up your listing</a></nav>
+</header>
+<main>
+  <div class="controls">
+    <input id="search" type="search" placeholder="Search projects by name, description, category or tag…" aria-label="Search projects">
+    <select id="category-filter" aria-label="Filter by category">
+      <option value="">All categories</option>
+      {% for c in categories %}<option value="{{ c }}">{{ c }}</option>{% endfor %}
+    </select>
+    <label><input type="checkbox" id="free-only"> Free only</label>
+    <label><input type="checkbox" id="oss-only"> Open source only</label>
+  </div>
+  <div class="tag-filter" aria-label="Filter by tag">
+    <p class="tag-filter-label">Search by tag:</p>
+    <div id="tag-chips" class="tag-chips">
+      {% for t in tags %}<button type="button" class="tag-chip" data-tag="{{ t }}" aria-pressed="false">{{ t }}</button>{% endfor %}
+    </div>
+    <p><button type="button" id="clear-filters" class="clear-filters">Clear all filters</button></p>
+  </div>
+  <p id="result-count" class="result-count" aria-live="polite">Showing {{ projects | length }} of {{ projects | length }} projects</p>
+  <div class="ad-slot" data-placement="directory-top" data-ad-network="adsterra">
+    <span class="ad-label">Advertisement</span>
+    <a class="sponsored-link" href="{{ adsterra_url }}" target="_blank" rel="sponsored noopener" data-ad-network="adsterra">Sponsored</a>
+  </div>
+  <ul id="project-list" class="project-list">
+  {% for p in projects %}
+    <li class="project-card" data-categories="{{ p.category | join(' ') }}" data-tags="{{ p.tags | join(' ') }}" data-pricing="{{ p.pricing }}" data-open-source="{{ p.open_source | lower }}">
+      <h2><a href="{{ base_path }}/project/{{ p.slug }}/">{{ p.name }}</a></h2>
+      <p>{{ p.description }}</p>
+      <p class="meta">{{ p.category | join(', ') }} · {{ p.pricing }} · {% if p.open_source %}Open source{% else %}Closed source{% endif %} · Verified {{ p.last_verified }}</p>
+      <p class="tags">{% for t in p.tags %}<a class="tag-chip tag-link" href="{{ base_path }}/?tag={{ t }}">{{ t }}</a>{% endfor %}</p>
+      <p><a class="visit" href="{{ base_path }}/go/{{ p.slug }}/">Visit Project</a></p>
+    </li>
+  {% endfor %}
+  </ul>
+  <p id="empty-state" class="empty-state" hidden>No projects match — try a different search, tag or filter.</p>
+  <section class="expedited-review" aria-label="Expedited review">
+    <h2>Expedited Review</h2>
+    <p>Need your project reviewed faster? Donate via <a href="{{ cashapp_url }}" target="_blank" rel="noopener">Cash App</a>, then email your transaction code to <a href="mailto:{{ contact_email }}">{{ contact_email }}</a>. A donation moves you up the queue — it does not guarantee approval.</p>
+    <ul>
+    {% for t in expedited_tiers %}
+      <li><strong>{{ t.name }}</strong> — {% if t.donation_usd == 0 %}Free{% else %}${{ t.donation_usd }}{% endif %} · {{ t.wait_time }}</li>
+    {% endfor %}
+    </ul>
+    <p><a href="{{ base_path }}/expedited-review/">See all speed options and how it works →</a></p>
+  </section>
+  <p class="submit-cta">Have a project? <a href="https://github.com/unaveragetech/open-project-directory/issues/new?template=submit-project.yml">Submit it via GitHub Issues</a>.</p>
+</main>
+<script src="{{ base_path }}/static/js/directory.js"></script>
+</body>
+</html>

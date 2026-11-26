@@ -1,0 +1,41 @@
+# Open Project Directory — settings
+directory:
+  name: "Open Project Directory"
+  base_url: "https://unaveragetech.github.io/open-project-directory/"
+  base_path: "/open-project-directory"
+  description: "A community-driven directory of verified internet services and projects."
+  # Production hosting: GitHub Pages (Jesse's direction, 2026-11-25) — easy,
+  # very light per project, deploys as soon as the site is ready.
+  # URL: https://unaveragetech.github.io/open-project-directory/
+  hosting: "github-pages"
+  storage: "repo-static"
+  # PostgreSQL is an OPTIONAL catalog DB only — not required for a Pages deploy.
+  database: "postgresql-optional"
+
+advertising:
+  enabled: true
+  network: "adsterra"
+  adsterra:
+    zone: "smart-link-3257926"
+    placement: "Smartlink_1"
+    smartlink_url: "https://asiafilm.org/4/f3a2a61554ddd109d393d78e61fa4202"
+  interstitial:
+    countdown_seconds: 5
+    # Compliance: Continue works independently of any ad click. Never gate
+    # navigation on an ad event. See docs/ADSTERRA_COMPLIANCE.md.
+    require_ad_click: false
+
+inspection:
+  http_timeout_seconds: 15
+  max_response_bytes: 5242880
+  max_redirects: 5
+  browser_timeout_seconds: 30
+  user_agent: "OpenProjectDirectory-Bot/1.0 (+https://unaveragetech.github.io/open-project-directory/)"
+
+reverification:
+  http_hours: 24
+  tls_hours: 24
+  browser_days: 7
+  documentation_days: 7
+  metadata_days: 30
+  full_evaluation_days: 30

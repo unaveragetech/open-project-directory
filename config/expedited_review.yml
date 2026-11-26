@@ -1,0 +1,34 @@
+# Expedited review — PROPOSED / DRAFT tiers.
+# Amounts and wait times below are suggestions for Jesse to confirm.
+# They are NOT confirmed prices. Do not present them as confirmed
+# prices on a live site until Jesse confirms them.
+# See docs/EXPEDITED_REVIEW.md.
+cashapp_url: "https://cash.app/$slightlysigh"
+contact_email: "primecomputerpieces@gmail.com"
+currency: "USD"
+# A donation moves a submission up the review queue only. It does NOT
+# guarantee approval. Quality and safety checks still apply.
+# Draft policy: a failed submission is not refunded automatically.
+guarantee: false
+refund_policy: "not_refunded_automatically"
+tiers:
+  - key: free
+    name: "Free"
+    donation_usd: 0
+    wait_time: "10–14 days"
+    description: "Standard queue — no donation needed."
+  - key: standard
+    name: "Standard"
+    donation_usd: 5
+    wait_time: "3–5 days"
+    description: "Faster review than the free queue."
+  - key: priority
+    name: "Priority"
+    donation_usd: 15
+    wait_time: "24–48 hours"
+    description: "Reviewed ahead of Standard and Free submissions."
+  - key: same-day
+    name: "Same-day"
+    donation_usd: 30
+    wait_time: "Same day if submitted before 12pm ET, otherwise next day"
+    description: "Fastest review. Submit before 12pm ET for same-day review; later submissions are reviewed the next day."

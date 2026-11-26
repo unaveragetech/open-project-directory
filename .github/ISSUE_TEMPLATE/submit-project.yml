@@ -1,0 +1,126 @@
+name: Submit a Project
+description: Submit a project for verification and listing in the Open Project Directory.
+title: "[Submission] "
+labels: ["submitted"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Project name
+      description: Display name of the project.
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: Website URL
+      description: Primary destination (must be https where possible).
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What does the project do?
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      multiple: true
+      options: [AI, Developer Tools, Utilities, Games, Productivity, Media, Finance, Education, Community, Other]
+    validations:
+      required: true
+  - type: input
+    id: documentation
+    attributes:
+      label: Documentation URL
+      placeholder: https://docs.example.com
+    validations:
+      required: false
+  - type: input
+    id: repository
+    attributes:
+      label: Repository URL
+      placeholder: https://github.com/example/project
+    validations:
+      required: false
+  - type: input
+    id: creator
+    attributes:
+      label: Creator
+      description: Individual or organisation.
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact (optional)
+      description: Optional maintenance contact.
+    validations:
+      required: false
+  - type: dropdown
+    id: pricing
+    attributes:
+      label: Pricing
+      options: [free, freemium, paid, open-source-free]
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        ## Expedited review (optional)
+        You can speed up review by donating via Cash App — https://cash.app/$slightlysigh — then emailing primecomputerpieces@gmail.com with your transaction code, project name and this issue number.
+        A donation only moves your submission up the review queue. **It does not guarantee approval** — quality and safety checks still apply, and a failed submission is not refunded automatically (draft policy). Proposed tiers: Free — standard queue, 10–14 days · Standard — $5, 3–5 days · Priority — $15, 24–48 hours · Same-day — $30, same day if submitted before 12pm ET, otherwise next day. See the Expedited Review page for full details.
+  - type: dropdown
+    id: expedited_review
+    attributes:
+      label: Expedited review
+      description: Pick a speed option. Paid tiers require a Cash App donation + transaction code below.
+      options:
+        - "Free — standard queue (10–14 days)"
+        - "Standard — $5 donation (3–5 days)"
+        - "Priority — $15 donation (24–48 hours)"
+        - "Same-day — $30 donation (same day if submitted before 12pm ET, otherwise next day)"
+    validations:
+      required: false
+  - type: input
+    id: transaction_code
+    attributes:
+      label: Transaction code
+      description: Your Cash App transaction code for the donation. Required if you picked a paid expedited tier (Standard, Priority or Same-day). Leave blank for Free.
+      placeholder: e.g. Cash App transaction code
+    validations:
+      required: false
+  - type: input
+    id: contact_email
+    attributes:
+      label: Contact email
+      description: Email to reach you about the donation / review (also email your transaction code to primecomputerpieces@gmail.com).
+      placeholder: you@example.com
+    validations:
+      required: false
+  - type: checkboxes
+    id: flags
+    attributes:
+      label: Additional details
+      options:
+        - label: Open source
+        - label: Requires registration
+        - label: Has a public API
+  - type: textarea
+    id: links
+    attributes:
+      label: Additional links
+      description: Demo, API, downloads, community — one per line.
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I confirm this project is mine or I am authorised to submit it, and the website URL is the real destination.
+          required: true

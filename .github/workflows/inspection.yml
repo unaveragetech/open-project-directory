@@ -1,0 +1,24 @@
+name: Inspection
+on:
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: "GitHub issue number to inspect"
+        required: true
+permissions:
+  contents: read
+  issues: write
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - name: Run inspection
+        env:
+          ISSUE_NUMBER: ${{ inputs.issue_number }}
+        run: python -m src.inspection.http_inspector --issue "$ISSUE_NUMBER" && python -m src.inspection.browser_inspector --issue "$ISSUE_NUMBER" && python -m src.inspection.scoring --issue "$ISSUE_NUMBER"

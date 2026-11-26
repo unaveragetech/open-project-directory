@@ -1,0 +1,26 @@
+name: Submission intake
+on:
+  issues:
+    types: [opened, edited]
+permissions:
+  contents: read
+  issues: write
+jobs:
+  intake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Parse and validate submission
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: python -m src.submission.parser --issue-body "$ISSUE_BODY" --issue-number "$ISSUE_NUMBER"
+      - name: Comment intake result
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.addLabels({owner: context.repo.owner, repo: context.repo.repo, issue_number: context.issue.number, labels: ['queued']});

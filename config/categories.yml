@@ -1,0 +1,22 @@
+# Categories for the directory
+categories:
+  - slug: ai
+    name: AI
+  - slug: developer-tools
+    name: Developer Tools
+  - slug: utilities
+    name: Utilities
+  - slug: games
+    name: Games
+  - slug: productivity
+    name: Productivity
+  - slug: media
+    name: Media
+  - slug: finance
+    name: Finance
+  - slug: education
+    name: Education
+  - slug: community
+    name: Community
+  - slug: other
+    name: Other

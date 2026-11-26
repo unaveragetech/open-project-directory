@@ -1,0 +1,30 @@
+/* Open Project Directory — minimal, readable, theme-neutral */
+* { box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.55; margin: 0 auto; max-width: 760px; padding: 1rem; color: #1a1a1a; background: #fff; }
+a { color: #0b5fff; }
+header h1 { margin-bottom: 0; }
+.controls { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0; }
+.controls input[type="search"] { flex: 1; min-width: 200px; padding: .5rem; }
+.project-list { list-style: none; padding: 0; }
+.project-card { border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
+.project-card h2 { margin: 0 0 .25rem; }
+.meta { color: #555; font-size: .9rem; }
+.visit { display: inline-block; background: #0b5fff; color: #fff; padding: .6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600; }
+.visit:hover { background: #0848c4; }
+.ad-slot { border: 1px dashed #999; border-radius: 6px; padding: .75rem; margin: 1rem 0; text-align: center; }
+.ad-label { display: block; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: #666; }
+.sponsored-link { font-size: .9rem; }
+.project-info dt { font-weight: 700; margin-top: .5rem; }
+.project-info dd { margin-left: 0; }
+.continue-btn[aria-disabled="true"] { opacity: .5; pointer-events: none; }
+.interstitial { text-align: center; }
+.ad-note { font-size: .9rem; color: #555; }
+.tag-chips { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0; }
+.tag-chip { display: inline-block; border: 1px solid #0b5fff; background: #fff; color: #0b5fff; border-radius: 999px; padding: .2rem .7rem; font-size: .85rem; cursor: pointer; text-decoration: none; }
+.tag-chip:hover { background: #e8f0ff; }
+.tag-chip.active, .tag-chip[aria-pressed="true"] { background: #0b5fff; color: #fff; }
+.tag-filter-label { font-weight: 700; margin-bottom: 0; }
+.clear-filters { background: none; border: 1px solid #999; border-radius: 6px; padding: .3rem .7rem; cursor: pointer; }
+.result-count { color: #555; font-size: .9rem; }
+.empty-state { border: 1px solid #ddd; border-radius: 8px; padding: 1rem; text-align: center; color: #555; }
+.tags { display: flex; flex-wrap: wrap; gap: .4rem; }

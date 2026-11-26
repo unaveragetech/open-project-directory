@@ -1,0 +1,24 @@
+# Quality scoring — weights sum to 100
+weights:
+  website_accessibility: 20
+  security_https: 15
+  content_quality: 20
+  documentation: 15
+  functionality: 15
+  metadata_completeness: 10
+  trust_consistency: 5
+
+# Decision bands
+thresholds:
+  auto_approve: 85
+  manual_review: 70
+  request_corrections: 50
+  # below 50: reject / quarantine
+
+# Hard overrides: any of these blocks publication regardless of score.
+hard_fail_checks:
+  - malware_detected
+  - phishing_detected
+  - deceptive_redirect
+  - dangerous_download
+  - ssrf_attempt

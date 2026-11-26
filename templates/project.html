@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ project.name }} — Open Project Directory</title>
+<meta name="description" content="{{ project.description }}">
+<link rel="stylesheet" href="{{ base_path }}/static/css/main.css">
+</head>
+<body>
+<header><p><a href="{{ base_path }}/">← Open Project Directory</a></p></header>
+<main>
+  <article class="profile">
+    <h1>{{ project.name }}</h1>
+    <p class="description">{{ project.description }}</p>
+    <p><a class="visit" href="{{ base_path }}/go/{{ project.slug }}/">Visit Project</a></p>
+    <div class="ad-slot" data-placement="profile-top" data-ad-network="adsterra">
+      <span class="ad-label">Advertisement</span>
+      <a class="sponsored-link" href="{{ adsterra_url }}" target="_blank" rel="sponsored noopener" data-ad-network="adsterra">Sponsored</a>
+    </div>
+    <dl class="project-info">
+      <dt>Category</dt><dd>{{ project.category | join(', ') }}</dd>
+      {% if project.tags %}<dt>Tags</dt><dd class="tags">{% for t in project.tags %}<a class="tag-chip tag-link" href="{{ base_path }}/?tag={{ t }}">{{ t }}</a>{% endfor %}</dd>{% endif %}
+      <dt>Pricing</dt><dd>{{ project.pricing }}</dd>
+      <dt>Open source</dt><dd>{% if project.open_source %}Yes{% else %}No{% endif %}</dd>
+      <dt>Creator</dt><dd>{{ project.creator }}</dd>
+      <dt>Website</dt><dd><a href="{{ project.website_url }}">{{ project.website_url }}</a></dd>
+      {% if project.documentation_url %}<dt>Documentation</dt><dd><a href="{{ project.documentation_url }}">{{ project.documentation_url }}</a></dd>{% endif %}
+      {% if project.repository_url %}<dt>Repository</dt><dd><a href="{{ project.repository_url }}">{{ project.repository_url }}</a></dd>{% endif %}
+      {% if project.platforms %}<dt>Platforms</dt><dd>{{ project.platforms | join(', ') }}</dd>{% endif %}
+      {% if project.features %}<dt>Features</dt><dd><ul>{% for f in project.features %}<li>{{ f }}</li>{% endfor %}</ul></dd>{% endif %}
+      <dt>Website status</dt><dd>{{ project.status }}</dd>
+      <dt>HTTPS</dt><dd>{% if project.https_verified %}Verified{% else %}Not verified{% endif %}</dd>
+      <dt>Last verified</dt><dd>{{ project.last_verified }}</dd>
+      <dt>Verification</dt><dd>Automated (quality score {{ project.quality_score }}/100)</dd>
+      {% if project.example %}<dt>Note</dt><dd>This is a clearly-marked example listing, not a real verified project.</dd>{% endif %}
+    </dl>
+    <p><a href="https://github.com/unaveragetech/open-project-directory/issues/new?template=report-project.yml">Report this listing</a></p>
+  </article>
+</main>
+</body>
+</html>

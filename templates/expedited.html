@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Expedited Review — Open Project Directory</title>
+<meta name="description" content="Speed up your project review with a Cash App donation. Proposed tiers from free (10–14 days) to same-day. A donation moves you up the queue — it does not guarantee approval.">
+<link rel="stylesheet" href="{{ base_path }}/static/css/main.css">
+</head>
+<body>
+<header>
+  <p><a href="{{ base_path }}/">← Open Project Directory</a></p>
+  <h1>Expedited Review</h1>
+  <p>Speed up your project review with a donation. <strong>Proposed tiers — amounts to be confirmed.</strong></p>
+</header>
+<main>
+  <p class="notice">A donation moves your submission up the review queue only. It does <strong>not guarantee approval</strong> — every project still passes the same quality and safety checks. Draft policy: a failed submission is not refunded automatically.</p>
+
+  <h2>Speed options</h2>
+  <table class="tiers">
+    <thead><tr><th>Tier</th><th>Donation</th><th>General wait time</th><th>Details</th></tr></thead>
+    <tbody>
+    {% for t in tiers %}
+      <tr>
+        <td>{{ t.name }}</td>
+        <td>{% if t.donation_usd == 0 %}Free{% else %}${{ t.donation_usd }}{% endif %}</td>
+        <td>{{ t.wait_time }}</td>
+        <td>{{ t.description }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+  <h2>How to get expedited review</h2>
+  <ol>
+    <li>Submit your project via <a href="https://github.com/unaveragetech/open-project-directory/issues/new?template=submit-project.yml">GitHub Issues</a> and pick your tier in the form.</li>
+    <li>Donate via Cash App: <a href="{{ cashapp_url }}" target="_blank" rel="noopener">Cash App — {{ cashapp_url }}</a> (opens in a new tab).</li>
+    <li>Email <a href="mailto:{{ contact_email }}?subject=Expedited%20review%20—%20transaction%20code">{{ contact_email }}</a> with your Cash App transaction code, the project name, and your GitHub issue number.</li>
+    <li>Once the transaction code is verified against the donation and the issue, your submission moves into the expedited queue for its tier. The review result is posted on your GitHub issue.</li>
+  </ol>
+
+  <p>Same-day tier: submit and verify before <strong>12pm ET</strong> for same-day review; after that, review is the next day. Wait times are general estimates from verification, not from opening the issue, and are not guarantees.</p>
+
+  <p>Full instructions: <a href="https://github.com/unaveragetech/open-project-directory/blob/main/docs/EXPEDITED_REVIEW.md">docs/EXPEDITED_REVIEW.md</a></p>
+  <p><a href="{{ base_path }}/">← Back to the directory</a></p>
+</main>
+</body>
+</html>

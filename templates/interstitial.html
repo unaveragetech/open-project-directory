@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Continue to {{ project.name }} — Open Project Directory</title>
+<meta name="description" content="You are leaving the Open Project Directory to visit {{ project.name }}.">
+<link rel="stylesheet" href="{{ base_path }}/static/css/main.css">
+</head>
+<body>
+<main class="interstitial">
+  <h1>You're heading to {{ project.name }}</h1>
+  <p>{{ project.description }}</p>
+  <p>Destination: <code>{{ project.website_url }}</code></p>
+  <div class="ad-slot" data-placement="interstitial" data-ad-network="adsterra">
+    <span class="ad-label">Advertisement</span>
+    <a class="sponsored-link" href="{{ adsterra_url }}" target="_blank" rel="sponsored noopener" data-ad-network="adsterra">Sponsored</a>
+  </div>
+  <p class="ad-note">The advertisement above is sponsored content. It is separate from
+  navigation — you do <strong>not</strong> need to click it to continue.</p>
+  <p id="countdown" data-countdown-seconds="{{ countdown_seconds }}">Please wait {{ countdown_seconds }} seconds…</p>
+  <p><a id="continue-btn" class="visit continue-btn" href="{{ project.website_url }}" aria-disabled="true">Continue to Project</a></p>
+  <p><a href="{{ base_path }}/project/{{ project.slug }}/">← Back to project profile</a></p>
+</main>
+<script src="{{ base_path }}/static/js/interstitial.js"></script>
+</body>
+</html>

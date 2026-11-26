@@ -1,0 +1,162 @@
+{
+  "projects": [
+    {
+      "name": "TokenBroker",
+      "slug": "tokenbroker",
+      "website_url": "https://tokenbroker.org",
+      "documentation_url": "https://tokenbroker.org/docs",
+      "repository_url": "",
+      "creator": "Jesse",
+      "description": "Prepaid OpenAI-compatible AI API gateway: one account and one key for hundreds of models, with a $15/month flat plan for unlimited usage (fair-use limits) or pay-as-you-go from a prepaid wallet. Also speaks Anthropic /v1/messages, so Claude Code works with environment variables only. Earn credits by running the worker app on idle hardware, including a phone worker.",
+      "category": [
+        "AI",
+        "Developer Tools"
+      ],
+      "pricing": "freemium",
+      "open_source": false,
+      "platforms": [
+        "web",
+        "windows",
+        "android",
+        "ios"
+      ],
+      "features": [
+        "One key for hundreds of models via an OpenAI-compatible API",
+        "$15/month flat plan or pay-as-you-go prepaid wallet",
+        "Anthropic /v1/messages support for Claude Code",
+        "Earn credits by running the worker app on PC or phone"
+      ],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 90,
+      "last_verified": "2026-11-25",
+      "source_urls": [
+        "https://tokenbroker.org",
+        "https://tokenbroker.org/docs"
+      ],
+      "tags": [
+        "ai",
+        "api-gateway",
+        "developer-tools",
+        "llm",
+        "claude-code"
+      ]
+    },
+    {
+      "name": "Collectify",
+      "slug": "collectify",
+      "website_url": "https://unaveragetech.github.io/collectify-app",
+      "documentation_url": "https://unaveragetech.github.io/collectify-app",
+      "repository_url": "",
+      "creator": "Montana Ross",
+      "description": "Free, offline, no-account TCG collection app: camera OCR card scanning, binders, price tracking, in-person trading, and a booster-pack mining game. Covers 54 games and 440,000+ cards with prices.",
+      "category": [
+        "Games",
+        "Utilities"
+      ],
+      "pricing": "free",
+      "open_source": false,
+      "platforms": [
+        "web",
+        "android"
+      ],
+      "features": [
+        "Camera OCR card scanning",
+        "Binders and price tracking",
+        "In-person trading",
+        "Booster-pack mining game",
+        "54 games, 440,000+ cards with prices"
+      ],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 88,
+      "last_verified": "2026-11-25",
+      "source_urls": [
+        "https://unaveragetech.github.io/collectify-app"
+      ],
+      "tags": [
+        "tcg",
+        "trading-cards",
+        "games",
+        "offline",
+        "utilities"
+      ]
+    },
+    {
+      "name": "Dead Grid",
+      "slug": "dead-grid",
+      "website_url": "https://unaveragetech.github.io/dead-grid",
+      "documentation_url": "https://unaveragetech.github.io/dead-grid",
+      "repository_url": "",
+      "creator": "Jesse",
+      "description": "Open-beta zombie survival game whose map is the player's real US neighbourhood (OpenStreetMap, 2020 Census horde size). Scavenge and build by day, hold the wall at night; survivors need food, water, sleep, hygiene, and morale. Free, no ads, no account; Android 8.0+ and browser.",
+      "category": [
+        "Games"
+      ],
+      "pricing": "free",
+      "open_source": false,
+      "platforms": [
+        "web",
+        "android"
+      ],
+      "features": [
+        "Map is the player's real US neighbourhood",
+        "Scavenge and build by day, defend the wall at night",
+        "Survivor needs: food, water, sleep, hygiene, morale",
+        "12 defenses, 3 robots plus drones",
+        "Free, no ads, no account"
+      ],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 87,
+      "last_verified": "2026-11-25",
+      "source_urls": [
+        "https://unaveragetech.github.io/dead-grid"
+      ],
+      "tags": [
+        "games",
+        "zombie-survival",
+        "openstreetmap",
+        "android",
+        "browser-game"
+      ]
+    },
+    {
+      "name": "Example AI Assistant",
+      "slug": "example-ai-assistant",
+      "website_url": "https://example.com",
+      "documentation_url": "https://docs.example.com",
+      "repository_url": "https://github.com/example/project",
+      "creator": "Example Developer",
+      "description": "An AI assistant for developers that provides code analysis and project assistance.",
+      "category": [
+        "AI",
+        "Developer Tools"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web",
+        "windows",
+        "linux"
+      ],
+      "features": [
+        "Code analysis",
+        "Project assistance"
+      ],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 93,
+      "last_verified": "2026-11-25",
+      "example": true,
+      "source_urls": [
+        "https://example.com"
+      ],
+      "tags": [
+        "ai",
+        "developer-tools",
+        "code-analysis"
+      ]
+    }
+  ]
+}
