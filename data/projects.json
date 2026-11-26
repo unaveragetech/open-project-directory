@@ -207,6 +207,36 @@
         "developer-tools",
         "open-source"
       ]
+    },
+    {
+      "name": "Dapper",
+      "slug": "dapper",
+      "website_url": "https://unaveragetech.github.io/dapper",
+      "documentation_url": "https://github.com/unaveragetech/dapper",
+      "repository_url": "https://github.com/unaveragetech/dapper",
+      "creator": "Jesse",
+      "description": "Android wardrobe app that learns your style from the clothes you already own \u2014 the colours you reach for and the combinations you love \u2014 instead of selling you something new. In active development, v0.3.",
+      "category": [
+        "Productivity"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://unaveragetech.github.io/dapper",
+        "https://github.com/unaveragetech/dapper"
+      ],
+      "tags": [
+        "productivity",
+        "open-source"
+      ]
     }
   ]
 }
