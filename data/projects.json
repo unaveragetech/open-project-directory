@@ -237,6 +237,36 @@
         "productivity",
         "open-source"
       ]
+    },
+    {
+      "name": "TrulySporting Analytics",
+      "slug": "trulysporting-analytics",
+      "website_url": "https://unaveragetech.github.io/trulysporting",
+      "documentation_url": "https://github.com/unaveragetech/trulysporting",
+      "repository_url": "https://github.com/unaveragetech/trulysporting",
+      "creator": "Jesse",
+      "description": "Real-time sports scores, trends, news, rankings and analytics powered by ESPN APIs, with a live game centre, matchups, odds and lines, player insights and game alerts.",
+      "category": [
+        "Media"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://unaveragetech.github.io/trulysporting",
+        "https://github.com/unaveragetech/trulysporting"
+      ],
+      "tags": [
+        "media",
+        "open-source"
+      ]
     }
   ]
 }
