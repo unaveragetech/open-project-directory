@@ -63,8 +63,11 @@ def score_inspection(http_result, browser_result, doc_result, metadata):
     optional = sum(1 for f in ("documentation", "repository", "pricing")
                    if metadata.get(f))
     components["metadata_completeness"] = min(1.0, (filled / 5.0) * 0.7 + (optional / 3.0) * 0.3)
-    components["trust_consistency"] = 0.0 if metadata.get("flags") else 1.0
-    # Trust: start at full, docked by hard-fail flags handled below.
+    # Trust: submission flags ("open source", "has a public API", …) are
+    # just metadata, not a reason to distrust a project — they used to
+    # zero this component for any flagged submission. Trust is full
+    # unless a hard fail was recorded (handled below via the decision).
+    components["trust_consistency"] = 1.0
     total = round(sum(components[k] * WEIGHTS[k] for k in WEIGHTS), 2)
     hard_fails = sorted(set(metadata.get("hard_fail_flags") or []) & HARD_FAILS)
     decision = "reject" if hard_fails else decision_for_score(total)

@@ -54,3 +54,29 @@ def test_hard_fail_overrides_high_score():
 def test_weights_sum_to_100():
     from src.inspection.scoring import WEIGHTS
     assert sum(WEIGHTS.values()) == 100
+
+
+def test_flags_do_not_zero_trust():
+    # Regression: any submission flags ("Has a public API", …) used to
+    # zero the trust component, costing 5 points for flagged projects.
+    http = {"http_status": 200, "dns_ok": True, "https_ok": True}
+    browser = {"rendered": True, "empty_page": False, "placeholder": False,
+               "console_errors": []}
+    docs = {"documentation": {"word_count": 500}}
+    meta = {"name": "X", "website": "https://example.com",
+            "description": "d", "category": ["AI"], "creator": "Jesse",
+            "documentation": "https://example.com/docs",
+            "repository": "https://github.com/example/x",
+            "pricing": "freemium", "flags": "Has a public API"}
+    result = score_inspection(http, browser, docs, meta)
+    assert result["components"]["trust_consistency"] == 1.0
+    assert result["score"] >= 85
+    assert result["decision"] == "auto_approve"
+
+
+def test_browser_uses_load_not_networkidle():
+    import pathlib
+    src = pathlib.Path(__file__).parent.parent.joinpath(
+        "src", "inspection", "browser_inspector.py").read_text()
+    assert 'wait_until="load"' in src
+    assert 'wait_until="networkidle"' not in src

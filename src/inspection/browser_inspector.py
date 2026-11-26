@@ -38,7 +38,16 @@ def inspect_in_browser(url, screenshot_path=None, timeout_ms=30000):
             page.on("console", lambda msg: result["console_errors"].append(msg.text)
                 if msg.type == "error" else None)
             page.on("pageerror", lambda exc: result["console_errors"].append(str(exc)))
-            response = page.goto(url, timeout=timeout_ms, wait_until="networkidle")
+            # "load" (not "networkidle"): many real sites keep a connection
+            # open (analytics, SSE, websockets) and never reach networkidle,
+            # which used to time out and score a perfectly good page as
+            # not rendered. If even "load" times out, still try to read
+            # whatever body is there instead of reporting nothing.
+            try:
+                response = page.goto(url, timeout=timeout_ms, wait_until="load")
+            except Exception as exc:  # noqa: BLE001 - fall back to loaded body
+                result["errors"].append(f"goto timed out, reading loaded body: {exc}")
+                response = None
             result["http_status"] = response.status if response else None
             result["title"] = page.title()
             body_text = (page.inner_text("body") or "").strip()
