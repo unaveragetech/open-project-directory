@@ -1,4 +1,5 @@
 """Compliance tests: the Continue button must work independently of any ad click."""
+import html
 import json
 import os
 import re
@@ -52,6 +53,8 @@ def test_generated_profiles_and_index(tmp_path):
     for project in _load_projects():
         profile = tmp_path / "site" / "project" / project["slug"] / "index.html"
         assert profile.exists()
-        text = profile.read_text()
+        # Names are HTML-escaped in the page ("Workman's Clock" renders
+        # as "Workman&#x27;s Clock"), so unescape before comparing.
+        text = html.unescape(profile.read_text())
         assert project["name"] in text
         assert project["website_url"] in text
