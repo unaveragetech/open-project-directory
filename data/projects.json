@@ -759,6 +759,156 @@
         "utilities",
         "open-source"
       ]
+    },
+    {
+      "name": "Grokem",
+      "slug": "grokem",
+      "website_url": "https://github.com/unaveragetech/Grokem",
+      "documentation_url": "https://github.com/unaveragetech/Grokem",
+      "repository_url": "https://github.com/unaveragetech/Grokem",
+      "creator": "Jesse",
+      "description": "Graphical setup tool for ngrok and pyngrok: install and configure tunnels without manual setup.",
+      "category": [
+        "Developer Tools"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://github.com/unaveragetech/Grokem",
+        "https://github.com/unaveragetech/Grokem"
+      ],
+      "tags": [
+        "developer-tools",
+        "open-source"
+      ]
+    },
+    {
+      "name": "AutoPortForward",
+      "slug": "autoportforward",
+      "website_url": "https://github.com/unaveragetech/AutoPortForward",
+      "documentation_url": "https://github.com/unaveragetech/AutoPortForward",
+      "repository_url": "https://github.com/unaveragetech/AutoPortForward",
+      "creator": "Jesse",
+      "description": "Port forwarding utility: configure forwards from a config file, with a blocked-IP list.",
+      "category": [
+        "Utilities"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://github.com/unaveragetech/AutoPortForward",
+        "https://github.com/unaveragetech/AutoPortForward"
+      ],
+      "tags": [
+        "utilities",
+        "open-source"
+      ]
+    },
+    {
+      "name": "TwinkleTonesCLI",
+      "slug": "twinkletonescli",
+      "website_url": "https://github.com/unaveragetech/t-t",
+      "documentation_url": "https://github.com/unaveragetech/t-t",
+      "repository_url": "https://github.com/unaveragetech/t-t",
+      "creator": "Jesse",
+      "description": "Python CLI that generates and schedules Facebook posts from content types such as quotes.",
+      "category": [
+        "Productivity"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://github.com/unaveragetech/t-t",
+        "https://github.com/unaveragetech/t-t"
+      ],
+      "tags": [
+        "productivity",
+        "open-source"
+      ]
+    },
+    {
+      "name": "Streaming-lit",
+      "slug": "streaming-lit",
+      "website_url": "https://github.com/unaveragetech/Streaming-lit",
+      "documentation_url": "https://github.com/unaveragetech/Streaming-lit",
+      "repository_url": "https://github.com/unaveragetech/Streaming-lit",
+      "creator": "Jesse",
+      "description": "Streamlit introduction and best practices: examples, tips, and guidance for building web apps with minimal effort.",
+      "category": [
+        "Educatio"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://github.com/unaveragetech/Streaming-lit",
+        "https://github.com/unaveragetech/Streaming-lit"
+      ],
+      "tags": [
+        "educatio",
+        "open-source"
+      ]
+    },
+    {
+      "name": "Ollama Open WebUI Setup",
+      "slug": "ollama-open-webui-setup",
+      "website_url": "https://github.com/unaveragetech/Ollama-openweb_ui-setup",
+      "documentation_url": "https://github.com/unaveragetech/Ollama-openweb_ui-setup",
+      "repository_url": "https://github.com/unaveragetech/Ollama-openweb_ui-setup",
+      "creator": "Jesse",
+      "description": "Setup scripts for Ollama, Open WebUI, and Stable Diffusion with GPU support, including installations, model pulls, and Docker configuration.",
+      "category": [
+        "Developer Tools"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://github.com/unaveragetech/Ollama-openweb_ui-setup",
+        "https://github.com/unaveragetech/Ollama-openweb_ui-setup"
+      ],
+      "tags": [
+        "developer-tools",
+        "open-source"
+      ]
     }
   ]
 }
