@@ -16,7 +16,7 @@ def _load_projects():
 
 
 def test_adsterra_url_is_the_issued_smartlink():
-    assert ADSTERRA_SMARTLINK_URL == "https://asiafilm.org/4/f3a2a61554ddd109d393d78e61fa4202"
+    assert ADSTERRA_SMARTLINK_URL == "https://asiafilm.org/4/675577d5711a79f686def97bac8e688f"
 
 
 def test_generated_interstitials(tmp_path):

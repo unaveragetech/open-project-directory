@@ -7,7 +7,7 @@ docs/ADSTERRA_COMPLIANCE.md.
 """
 import html
 
-ADSTERRA_SMARTLINK_URL = "https://asiafilm.org/4/f3a2a61554ddd109d393d78e61fa4202"
+ADSTERRA_SMARTLINK_URL = "https://asiafilm.org/4/675577d5711a79f686def97bac8e688f"
 ADSTERRA_ZONE = "smart-link-3257926"
 ADSTERRA_PLACEMENT = "Smartlink_1"
 

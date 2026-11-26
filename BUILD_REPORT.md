@@ -56,7 +56,7 @@ A complete working repository implementing the outline (§1–§14):
 
 ## Adsterra compliance (verified)
 
-- Smart link used, exactly as issued: `https://asiafilm.org/4/f3a2a61554ddd109d393d78e61fa4202`
+- Smart link used, exactly as issued: `https://asiafilm.org/4/675577d5711a79f686def97bac8e688f`
   (zone `smart-link-3257926`, placement `Smartlink_1`, from
   `~/workspace/user/files/Pub_Codes_3257926_1795549772_0_pwrt.txt`).
 - It appears **only** as a clearly labelled "Sponsored" link opening in a

@@ -75,7 +75,7 @@ matters doubly before scaling.
 
 - Zone: `smart-link-3257926`
 - Placement: `Smartlink_1`
-- URL: `https://asiafilm.org/4/f3a2a61554ddd109d393d78e61fa4202`
+- URL: `https://asiafilm.org/4/675577d5711a79f686def97bac8e688f`
 - Defined in `config/settings.yml` (`advertising.adsterra.smartlink_url`)
   and rendered only via `src/advertising/placements.py`
   (`render_sponsored_link`), which always adds the Sponsored label and

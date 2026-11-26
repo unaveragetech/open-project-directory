@@ -18,7 +18,7 @@ advertising:
   adsterra:
     zone: "smart-link-3257926"
     placement: "Smartlink_1"
-    smartlink_url: "https://asiafilm.org/4/f3a2a61554ddd109d393d78e61fa4202"
+    smartlink_url: "https://asiafilm.org/4/675577d5711a79f686def97bac8e688f"
   interstitial:
     countdown_seconds: 5
     # Compliance: Continue works independently of any ad click. Never gate

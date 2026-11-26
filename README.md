@@ -167,7 +167,7 @@ come first.
   without it.
 
 Adsterra smart link in use (zone `smart-link-3257926`, placement
-`Smartlink_1`): `https://asiafilm.org/4/f3a2a61554ddd109d393d78e61fa4202`
+`Smartlink_1`): `https://asiafilm.org/4/675577d5711a79f686def97bac8e688f`
 
 ## 🏗️ What this is — and what it is not
 

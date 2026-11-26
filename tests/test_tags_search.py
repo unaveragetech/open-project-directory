@@ -9,7 +9,7 @@ from src.publishing.generator import generate_site
 from src.submission.normalizer import normalize_submission
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
-ADSTERRA = "https://asiafilm.org/4/f3a2a61554ddd109d393d78e61fa4202"
+ADSTERRA = "https://asiafilm.org/4/675577d5711a79f686def97bac8e688f"
 
 
 def _projects():
