@@ -297,6 +297,40 @@
         "utilities",
         "open-source"
       ]
+    },
+    {
+      "name": "Workman's Clock",
+      "slug": "workman-s-clock",
+      "website_url": "https://unaveragetech.github.io/Wmc",
+      "documentation_url": "https://github.com/unaveragetech/Wmc",
+      "repository_url": "https://github.com/unaveragetech/Wmc",
+      "creator": "Jesse",
+      "description": "Workman's Clock \u2014 a real-time earnings calculator: set your rate and hours, add breaks and multiple income streams, and watch your net pay tick up by the second.",
+      "category": [
+        "Fi",
+        "a",
+        "ce"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 92,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://unaveragetech.github.io/Wmc",
+        "https://github.com/unaveragetech/Wmc"
+      ],
+      "tags": [
+        "fi",
+        "a",
+        "ce",
+        "open-source"
+      ]
     }
   ]
 }
