@@ -1,5 +1,6 @@
 """Expedited review: proposed tiers in config, transaction-code rules,
 and the generated expedited page (Cash App link + email + all tiers)."""
+import json
 import os
 import re
 
@@ -95,9 +96,9 @@ def test_parser_maps_expedited_fields():
 def test_expedited_page_generated(tmp_path):
     site = tmp_path / "site"
     counts = generate_site(os.path.join(ROOT, "data", "projects.json"), str(site))
-    assert counts["projects"] == 4
-    assert counts["profiles"] == 4
-    assert counts["interstitials"] == 4
+    assert counts["projects"] == len(json.load(open(os.path.join(ROOT, "data", "projects.json")))["projects"])
+    assert counts["profiles"] == len(json.load(open(os.path.join(ROOT, "data", "projects.json")))["projects"])
+    assert counts["interstitials"] == len(json.load(open(os.path.join(ROOT, "data", "projects.json")))["projects"])
     assert counts["expedited_pages"] == 1
     page = site / "expedited-review" / "index.html"
     assert page.exists()

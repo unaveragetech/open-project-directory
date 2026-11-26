@@ -8,10 +8,16 @@
 <link rel="stylesheet" href="{{ base_path }}/static/css/main.css">
 </head>
 <body>
-<header>
-  <h1>Open Project Directory</h1>
-  <p>Verified internet projects, discovered and checked automatically.</p>
-  <nav><a href="{{ base_path }}/expedited-review/">Expedited Review — speed up your listing</a></nav>
+<header class="hero">
+  <p class="hero-eyebrow">🌐 Open Project Directory</p>
+  <h1>Find verified internet projects</h1>
+  <p class="hero-tagline">Every listing is inspected, scored and checked before it goes live — search by name, description, category or tag.</p>
+  <p class="hero-stats">{{ projects | length }} verified projects · inspected automatically · free to browse</p>
+  <p class="hero-actions">
+    <a class="btn btn-primary" href="#project-list">🔍 Browse projects</a>
+    <a class="btn" href="https://github.com/unaveragetech/open-project-directory/issues/new?template=submit-project.yml">➕ Submit a project</a>
+  </p>
+  <nav><a href="{{ base_path }}/expedited-review/">⚡ Expedited Review — speed up your listing</a></nav>
 </header>
 <main>
   <div class="controls">
@@ -57,8 +63,13 @@
     </ul>
     <p><a href="{{ base_path }}/expedited-review/">See all speed options and how it works →</a></p>
   </section>
-  <p class="submit-cta">Have a project? <a href="https://github.com/unaveragetech/open-project-directory/issues/new?template=submit-project.yml">Submit it via GitHub Issues</a>.</p>
+  <p class="submit-cta">Have a project? <a href="https://github.com/unaveragetech/open-project-directory/issues/new?template=submit-project.yml">Submit it via GitHub Issues</a> — it will be inspected, scored, and either published or explained why not, right on your issue.</p>
 </main>
+<footer class="site-footer">
+  <p>Open Project Directory · <a href="https://github.com/unaveragetech/open-project-directory">Source on GitHub</a></p>
+  <p>Contact: <a href="mailto:{{ directory_contact_email }}">{{ directory_contact_email }}</a> · Expedited review codes: <a href="mailto:{{ contact_email }}">{{ contact_email }}</a></p>
+  <p class="footer-note">Every listing is inspected automatically before publication. A passing score is a technical quality signal, not an absolute guarantee that a service is trustworthy.</p>
+</footer>
 <script src="{{ base_path }}/static/js/directory.js"></script>
 </body>
 </html>

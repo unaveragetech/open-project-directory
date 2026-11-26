@@ -21,8 +21,8 @@ def test_adsterra_url_is_the_issued_smartlink():
 def test_generated_interstitials(tmp_path):
     counts = generate_site(os.path.join(ROOT, "data", "projects.json"),
                            str(tmp_path / "site"))
-    assert counts["projects"] == 4
-    assert counts["interstitials"] == 4
+    assert counts["projects"] == len(json.load(open(os.path.join(ROOT, "data", "projects.json")))["projects"])
+    assert counts["interstitials"] == len(json.load(open(os.path.join(ROOT, "data", "projects.json")))["projects"])
     for project in _load_projects():
         html = (tmp_path / "site" / "go" / project["slug"] / "index.html").read_text()
         # Continue link exists, points at the real project URL, not the ad.

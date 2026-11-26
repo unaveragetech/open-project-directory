@@ -1,48 +1,6 @@
 {
   "projects": [
     {
-      "name": "TokenBroker",
-      "slug": "tokenbroker",
-      "website_url": "https://tokenbroker.org",
-      "documentation_url": "https://tokenbroker.org/docs",
-      "repository_url": "",
-      "creator": "Jesse",
-      "description": "Prepaid OpenAI-compatible AI API gateway: one account and one key for hundreds of models, with a $15/month flat plan for unlimited usage (fair-use limits) or pay-as-you-go from a prepaid wallet. Also speaks Anthropic /v1/messages, so Claude Code works with environment variables only. Earn credits by running the worker app on idle hardware, including a phone worker.",
-      "category": [
-        "AI",
-        "Developer Tools"
-      ],
-      "pricing": "freemium",
-      "open_source": false,
-      "platforms": [
-        "web",
-        "windows",
-        "android",
-        "ios"
-      ],
-      "features": [
-        "One key for hundreds of models via an OpenAI-compatible API",
-        "$15/month flat plan or pay-as-you-go prepaid wallet",
-        "Anthropic /v1/messages support for Claude Code",
-        "Earn credits by running the worker app on PC or phone"
-      ],
-      "status": "Operational",
-      "https_verified": true,
-      "quality_score": 90,
-      "last_verified": "2026-11-25",
-      "source_urls": [
-        "https://tokenbroker.org",
-        "https://tokenbroker.org/docs"
-      ],
-      "tags": [
-        "ai",
-        "api-gateway",
-        "developer-tools",
-        "llm",
-        "claude-code"
-      ]
-    },
-    {
       "name": "Collectify",
       "slug": "collectify",
       "website_url": "https://unaveragetech.github.io/collectify-app",

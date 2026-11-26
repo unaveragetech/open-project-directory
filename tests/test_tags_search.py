@@ -76,8 +76,8 @@ def test_index_has_tag_chips_count_and_empty_state(tmp_path):
 def test_index_links_use_pages_base_path(tmp_path):
     site = tmp_path / "site"
     generate_site(os.path.join(ROOT, "data", "projects.json"), str(site))
-    for rel in ["index.html", "project/tokenbroker/index.html",
-                "go/tokenbroker/index.html"]:
+    for rel in ["index.html", "project/collectify/index.html",
+                "go/collectify/index.html"]:
         html = (site / rel).read_text()
         assert 'href="/static/' not in html and 'src="/static/' not in html
         assert 'href="/project/' not in html and 'href="/go/' not in html

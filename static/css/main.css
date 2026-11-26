@@ -28,3 +28,15 @@ header h1 { margin-bottom: 0; }
 .result-count { color: #555; font-size: .9rem; }
 .empty-state { border: 1px solid #ddd; border-radius: 8px; padding: 1rem; text-align: center; color: #555; }
 .tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+.hero { text-align: center; padding: 1.5rem 1rem 1rem; border-bottom: 1px solid #ddd; margin-bottom: 1rem; }
+.hero-eyebrow { font-weight: 700; letter-spacing: .06em; text-transform: uppercase; font-size: .85rem; color: #0b5fff; margin: 0 0 .25rem; }
+.hero h1 { margin: 0 0 .5rem; font-size: 1.9rem; }
+.hero-tagline { font-size: 1.05rem; color: #333; margin: .25rem 0; }
+.hero-stats { color: #555; font-size: .9rem; margin: .5rem 0; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; margin: 1rem 0 .5rem; }
+.btn { display: inline-block; border: 1px solid #0b5fff; color: #0b5fff; background: #fff; padding: .6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600; }
+.btn:hover { background: #e8f0ff; }
+.btn-primary { background: #0b5fff; color: #fff; }
+.btn-primary:hover { background: #0848c4; }
+.site-footer { border-top: 1px solid #ddd; margin-top: 2rem; padding: 1rem 0; text-align: center; font-size: .9rem; color: #555; }
+.footer-note { font-size: .85rem; }

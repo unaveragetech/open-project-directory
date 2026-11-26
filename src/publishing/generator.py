@@ -26,6 +26,8 @@ DEFAULT_EXPEDITED = os.path.join(
     os.path.dirname(__file__), "..", "..", "config", "expedited_review.yml")
 CASHAPP_URL = "https://cash.app/$slightlysigh"
 CONTACT_EMAIL = "primecomputerpieces@gmail.com"
+# General contact for the directory (shown in the site footer).
+DIRECTORY_CONTACT_EMAIL = "primecomputerpieces@gmail.com"
 DEFAULT_TIERS = [
     {"key": "free", "name": "Free", "donation_usd": 0,
      "wait_time": "10–14 days",
@@ -90,7 +92,8 @@ def generate_site(data_path=DEFAULT_DATA, out_dir=DEFAULT_OUT,
         base_path=base_path, adsterra_url=ADSTERRA_SMARTLINK_URL,
         expedited_tiers=expedited["tiers"],
         cashapp_url=expedited["cashapp_url"],
-        contact_email=expedited["contact_email"])
+        contact_email=expedited["contact_email"],
+        directory_contact_email=DIRECTORY_CONTACT_EMAIL)
     with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as fh:
         fh.write(index_html)
 
