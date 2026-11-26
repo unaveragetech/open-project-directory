@@ -331,6 +331,36 @@
         "ce",
         "open-source"
       ]
+    },
+    {
+      "name": "Datamore",
+      "slug": "datamore",
+      "website_url": "https://unaveragetech.github.io/Datamore",
+      "documentation_url": "https://github.com/unaveragetech/Datamore",
+      "repository_url": "https://github.com/unaveragetech/Datamore",
+      "creator": "Jesse",
+      "description": "Generate AI training datasets from GitHub Issues using Ollama \u2014 create an issue with a model name and Datamore builds the dataset.",
+      "category": [
+        "Developer Tools"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 92,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://unaveragetech.github.io/Datamore",
+        "https://github.com/unaveragetech/Datamore"
+      ],
+      "tags": [
+        "developer-tools",
+        "open-source"
+      ]
     }
   ]
 }
