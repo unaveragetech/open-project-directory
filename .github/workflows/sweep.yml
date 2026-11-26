@@ -1,0 +1,93 @@
+name: Submission sweep
+# Drain stuck submissions: every 15 minutes, process every open issue
+# that still carries only the `submitted` label and has had no activity
+# for 10+ minutes. Those are the submissions whose pipeline run was
+# cancelled before it started (GitHub drops all but the newest *waiting*
+# run in a shared concurrency group, even with cancel-in-progress:
+# false), or whose publish failed after inspection. One sweep processes
+# them all, commits every catalog addition in a single commit, deploys
+# once, and finalizes each published issue — so a rapid batch can never
+# strand submissions again.
+#
+# NOTE: upload this file only after the 2026-11-26 batch (issues #4-#11)
+# has finished its serial re-runs, so the sweep does not compete with
+# them for the same issues.
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+concurrency:
+  group: "submission-pipeline"
+  cancel-in-progress: false
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - name: Sweep stuck submissions
+        id: sweep
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m src.pipeline.sweep --data-path data/projects.json --out-dir .
+      - name: Build static site
+        if: steps.sweep.outputs.published_any == 'true'
+        run: |
+          python -m src.publishing.generator --data data/projects.json --out site
+          python -c "from src.publishing.deployer import validate_site_output; ok, errs = validate_site_output('site'); print(errs); raise SystemExit(0 if ok else 1)"
+      - uses: actions/configure-pages@v5
+        if: steps.sweep.outputs.published_any == 'true'
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.sweep.outputs.published_any == 'true'
+        with:
+          path: site
+      - name: Wait for Pages artifact
+        if: steps.sweep.outputs.published_any == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # deploy-pages queries the artifact list the instant the upload
+          # finishes, and that list is eventually consistent: twice on
+          # 2026-11-26 (Datamore, Copperhead) it answered "0 artifacts"
+          # under a second after a successful upload and failed the
+          # deploy. Poll until the github-pages artifact is visible.
+          python3 - <<'PY'
+          import json, os, time, urllib.request
+          token = os.environ["GITHUB_TOKEN"]
+          repo = os.environ["GITHUB_REPOSITORY"]
+          run_id = os.environ["GITHUB_RUN_ID"]
+          url = f"https://api.github.com/repos/{repo}/actions/runs/{run_id}/artifacts"
+          for attempt in range(24):
+              req = urllib.request.Request(url, headers={
+                  "Authorization": f"Bearer {token}",
+                  "Accept": "application/vnd.github+json"})
+              with urllib.request.urlopen(req, timeout=15) as resp:
+                  names = [a["name"] for a in json.load(resp).get("artifacts", [])]
+              if "github-pages" in names:
+                  print("github-pages artifact visible after", attempt * 5, "s")
+                  break
+              time.sleep(5)
+          else:
+              raise SystemExit("github-pages artifact never appeared")
+          PY
+      - name: Deploy to GitHub Pages
+        id: deployment
+        if: steps.sweep.outputs.published_any == 'true'
+        uses: actions/deploy-pages@v4
+      - name: Finalize published issues
+        if: steps.sweep.outputs.published_any == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for n in $(echo "${{ steps.sweep.outputs.published }}" | tr ',' ' '); do
+            python -m src.pipeline.process_issue --issue-number "$n" --phase finalize --outcome-path "pipeline_outcome_$n.json"
+          done
