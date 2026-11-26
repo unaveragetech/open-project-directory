@@ -40,6 +40,7 @@
   <div class="ad-slot" data-placement="directory-top" data-ad-network="adsterra">
     <span class="ad-label">Advertisement</span>
     <a class="sponsored-link" href="{{ adsterra_url }}" target="_blank" rel="sponsored noopener" data-ad-network="adsterra">Sponsored</a>
+    <p class="sponsored-sub"></p>
   </div>
   <ul id="project-list" class="project-list">
   {% for p in projects %}
@@ -71,5 +72,6 @@
   <p class="footer-note">Every listing is inspected automatically before publication. A passing score is a technical quality signal, not an absolute guarantee that a service is trustworthy.</p>
 </footer>
 <script src="{{ base_path }}/static/js/directory.js"></script>
+<script src="{{ base_path }}/static/js/sponsored.js"></script>
 </body>
 </html>

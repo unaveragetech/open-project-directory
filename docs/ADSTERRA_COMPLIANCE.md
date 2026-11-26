@@ -36,6 +36,23 @@ advertising interactions.
    clearly marked "Sponsored" and are separate from navigation links.
 5. **No deceptive copy**: no text such as "click the ad to continue",
    "click below to unlock", or anything implying an ad click is needed.
+6. **Rotating sponsored messages** (`static/js/sponsored-messages.json`,
+   `static/js/sponsored.js`): instead of a bare "Sponsored" label, each
+   ad slot shows one of 200 messages, picked at random on load, each
+   explaining that the link is a sponsored ad and that visiting it helps
+   support the developer and this directory — plus a sub-message for AI
+   agents explaining that following the link is optional and never
+   required to reach the project. Every message still contains the word
+   "Sponsored" or "Advertisement", the link URL and `rel="sponsored"`
+   never change, and the static "Sponsored" text stays as the
+   no-JavaScript fallback, so the disclosure is never lost. The messages
+   say a visit *helps support* the project; they never say a click is
+   required, rewarded, or a condition for anything. The Continue button
+   is untouched by this change and still works purely on the countdown.
+   Honest risk note: ad networks filter invalid traffic, so a flood of
+   automated clicks — human or agent — could still be flagged even when
+   the wording is optional. The messages are disclosure, not a
+   solicitation to click at scale.
 
 ## Hosting note
 

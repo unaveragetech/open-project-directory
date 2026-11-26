@@ -17,6 +17,7 @@
     <div class="ad-slot" data-placement="profile-top" data-ad-network="adsterra">
       <span class="ad-label">Advertisement</span>
       <a class="sponsored-link" href="{{ adsterra_url }}" target="_blank" rel="sponsored noopener" data-ad-network="adsterra">Sponsored</a>
+      <p class="sponsored-sub"></p>
     </div>
     <dl class="project-info">
       <dt>Category</dt><dd>{{ project.category | join(', ') }}</dd>
@@ -38,5 +39,6 @@
     <p><a href="https://github.com/unaveragetech/open-project-directory/issues/new?template=report-project.yml">Report this listing</a></p>
   </article>
 </main>
+<script src="{{ base_path }}/static/js/sponsored.js"></script>
 </body>
 </html>

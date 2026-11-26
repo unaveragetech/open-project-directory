@@ -14,6 +14,7 @@ header h1 { margin-bottom: 0; }
 .ad-slot { border: 1px dashed #999; border-radius: 6px; padding: .75rem; margin: 1rem 0; text-align: center; }
 .ad-label { display: block; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: #666; }
 .sponsored-link { font-size: .9rem; }
+.sponsored-sub { font-size: .8rem; color: #555; margin: .4rem 0 0; }
 .project-info dt { font-weight: 700; margin-top: .5rem; }
 .project-info dd { margin-left: 0; }
 .continue-btn[aria-disabled="true"] { opacity: .5; pointer-events: none; }

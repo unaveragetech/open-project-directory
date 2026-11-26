@@ -13,13 +13,22 @@ ADSTERRA_PLACEMENT = "Smartlink_1"
 
 
 def render_sponsored_link(url=ADSTERRA_SMARTLINK_URL, label="Sponsored"):
-    """Return a Sponsored ad link. Always labelled, always new tab."""
+    """Return a Sponsored ad link. Always labelled, always new tab.
+
+    The visible label is replaced client-side by static/js/sponsored.js
+    with one of 200 rotating messages (static/js/sponsored-messages.json)
+    explaining that the link is a sponsored ad and that visiting it
+    helps support the developer and this directory. The static label
+    here is the no-JavaScript fallback, so the disclosure is never
+    lost. The sub-message slot is filled by the same script.
+    """
     safe_url = html.escape(url, quote=True)
     safe_label = html.escape(label)
     return (
         f'<a class="sponsored-link" href="{safe_url}" target="_blank" '
         f'rel="sponsored noopener" data-ad-network="adsterra" '
         f'data-ad-zone="{ADSTERRA_ZONE}">{safe_label}</a>'
+        f'<p class="sponsored-sub"></p>'
     )
 
 
