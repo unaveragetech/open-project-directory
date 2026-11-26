@@ -909,6 +909,126 @@
         "developer-tools",
         "open-source"
       ]
+    },
+    {
+      "name": "Crawlie",
+      "slug": "crawlie",
+      "website_url": "https://github.com/unaveragetech/crawlie",
+      "documentation_url": "https://github.com/unaveragetech/crawlie",
+      "repository_url": "https://github.com/unaveragetech/crawlie",
+      "creator": "Jesse",
+      "description": "Configurable web crawler with per-setting controls for targets, depth, and output.",
+      "category": [
+        "Developer Tools"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://github.com/unaveragetech/crawlie",
+        "https://github.com/unaveragetech/crawlie"
+      ],
+      "tags": [
+        "developer-tools",
+        "open-source"
+      ]
+    },
+    {
+      "name": "Telly",
+      "slug": "telly",
+      "website_url": "https://github.com/unaveragetech/Telly",
+      "documentation_url": "https://github.com/unaveragetech/Telly",
+      "repository_url": "https://github.com/unaveragetech/Telly",
+      "creator": "Jesse",
+      "description": "Customizable Telegram companion bot that replies with witty responses and follows commands.",
+      "category": [
+        "Productivity"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://github.com/unaveragetech/Telly",
+        "https://github.com/unaveragetech/Telly"
+      ],
+      "tags": [
+        "productivity",
+        "open-source"
+      ]
+    },
+    {
+      "name": "Storagepluss",
+      "slug": "storagepluss",
+      "website_url": "https://github.com/unaveragetech/storagepluss",
+      "documentation_url": "https://github.com/unaveragetech/storagepluss",
+      "repository_url": "https://github.com/unaveragetech/storagepluss",
+      "creator": "Jesse",
+      "description": "CLI utility to reclaim disk space safely and efficiently, built with safety as a cornerstone.",
+      "category": [
+        "Utilities"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://github.com/unaveragetech/storagepluss",
+        "https://github.com/unaveragetech/storagepluss"
+      ],
+      "tags": [
+        "utilities",
+        "open-source"
+      ]
+    },
+    {
+      "name": "Minecraft Servers",
+      "slug": "minecraft-servers",
+      "website_url": "https://unaveragetech.github.io/list-of-servers",
+      "documentation_url": "https://github.com/unaveragetech/list-of-servers",
+      "repository_url": "https://github.com/unaveragetech/list-of-servers",
+      "creator": "Jesse",
+      "description": "Minecraft Servers API: shows a random selection of Minecraft servers \u2014 refresh the page for a new selection.",
+      "category": [
+        "Games"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 92,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://unaveragetech.github.io/list-of-servers",
+        "https://github.com/unaveragetech/list-of-servers"
+      ],
+      "tags": [
+        "games",
+        "open-source"
+      ]
     }
   ]
 }
