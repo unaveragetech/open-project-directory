@@ -1029,6 +1029,70 @@
         "games",
         "open-source"
       ]
+    },
+    {
+      "name": "Stock Bot",
+      "slug": "stock-bot",
+      "website_url": "https://github.com/unaveragetech/stock-bot",
+      "documentation_url": "https://github.com/unaveragetech/stock-bot",
+      "repository_url": "https://github.com/unaveragetech/stock-bot",
+      "creator": "Jesse",
+      "description": "Interactive Python CLI tool to analyze stocks using yfinance: specify screening criteria, analyze trends, and display results in dynamic visualizations.",
+      "category": [
+        "Fi",
+        "a",
+        "ce"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://github.com/unaveragetech/stock-bot",
+        "https://github.com/unaveragetech/stock-bot"
+      ],
+      "tags": [
+        "fi",
+        "a",
+        "ce",
+        "open-source"
+      ]
+    },
+    {
+      "name": "Pagelet",
+      "slug": "pagelet",
+      "website_url": "https://unaveragetech.github.io/Pagelet",
+      "documentation_url": "https://github.com/unaveragetech/Pagelet",
+      "repository_url": "https://github.com/unaveragetech/Pagelet",
+      "creator": "Jesse",
+      "description": "Dynamic media display with widgets: search a URL and display it through selectable widgets.",
+      "category": [
+        "Developer Tools"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 92,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://unaveragetech.github.io/Pagelet",
+        "https://github.com/unaveragetech/Pagelet"
+      ],
+      "tags": [
+        "developer-tools",
+        "open-source"
+      ]
     }
   ]
 }
