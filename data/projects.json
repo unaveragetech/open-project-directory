@@ -421,6 +421,36 @@
         "developer-tools",
         "open-source"
       ]
+    },
+    {
+      "name": "Server Head",
+      "slug": "server-head",
+      "website_url": "https://github.com/unaveragetech/server_head",
+      "documentation_url": "https://github.com/unaveragetech/server_head",
+      "repository_url": "https://github.com/unaveragetech/server_head",
+      "creator": "Jesse",
+      "description": "Multi-instance Flask web server for serving HTML files from a local machine, with a web interface.",
+      "category": [
+        "Developer Tools"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://github.com/unaveragetech/server_head",
+        "https://github.com/unaveragetech/server_head"
+      ],
+      "tags": [
+        "developer-tools",
+        "open-source"
+      ]
     }
   ]
 }
