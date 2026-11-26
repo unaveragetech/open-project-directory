@@ -147,6 +147,36 @@
         "developer-tools",
         "api"
       ]
+    },
+    {
+      "name": "Fantasy Athlete PvP",
+      "slug": "fantasy-athlete-pvp",
+      "website_url": "https://unaveragetech.github.io/Fantasy-pvp",
+      "documentation_url": "https://github.com/unaveragetech/Fantasy-pvp",
+      "repository_url": "https://github.com/unaveragetech/Fantasy-pvp",
+      "creator": "Jesse",
+      "description": "Fantasy Athlete PvP \u2014 collect one-of-a-kind athletes and play 27 game types in the browser or on Android, with every moment verifiable.",
+      "category": [
+        "Games"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://unaveragetech.github.io/Fantasy-pvp",
+        "https://github.com/unaveragetech/Fantasy-pvp"
+      ],
+      "tags": [
+        "games",
+        "open-source"
+      ]
     }
   ]
 }
