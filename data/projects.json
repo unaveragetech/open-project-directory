@@ -451,6 +451,164 @@
         "developer-tools",
         "open-source"
       ]
+    },
+    {
+      "name": "Tax Refund Estimator",
+      "slug": "tax-refund-estimator",
+      "website_url": "https://unaveragetech.github.io/Tax-help.yo",
+      "documentation_url": "https://github.com/unaveragetech/Tax-help.yo",
+      "repository_url": "https://github.com/unaveragetech/Tax-help.yo",
+      "creator": "Jesse",
+      "description": "Precise Tax Refund Estimator 2025: calculates federal and NY State tax refunds using official IRS and NY State tax tables, with field-by-field guidance on where to find each figure.",
+      "category": [
+        "Fi",
+        "a",
+        "ce"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://unaveragetech.github.io/Tax-help.yo",
+        "https://github.com/unaveragetech/Tax-help.yo"
+      ],
+      "tags": [
+        "fi",
+        "a",
+        "ce",
+        "open-source"
+      ]
+    },
+    {
+      "name": "Flask Container Management",
+      "slug": "flask-container-management",
+      "website_url": "https://unaveragetech.github.io/flask-container-management",
+      "documentation_url": "https://github.com/unaveragetech/flask-container-management",
+      "repository_url": "https://github.com/unaveragetech/flask-container-management",
+      "creator": "Jesse",
+      "description": "Flask web application to create, manage, and monitor isolated Python environments in Docker containers, each sandboxed from the others and the host system.",
+      "category": [
+        "Developer Tools"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://unaveragetech.github.io/flask-container-management",
+        "https://github.com/unaveragetech/flask-container-management"
+      ],
+      "tags": [
+        "developer-tools",
+        "open-source"
+      ]
+    },
+    {
+      "name": "CDN Guide",
+      "slug": "cdn-guide",
+      "website_url": "https://unaveragetech.github.io/CDN_MORE",
+      "documentation_url": "https://github.com/unaveragetech/CDN_MORE",
+      "repository_url": "https://github.com/unaveragetech/CDN_MORE",
+      "creator": "Jesse",
+      "description": "Comprehensive guide to Content Delivery Networks: how distributed servers deliver web content by geography, with popular CDNs and code examples for using them.",
+      "category": [
+        "Educatio"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://unaveragetech.github.io/CDN_MORE",
+        "https://github.com/unaveragetech/CDN_MORE"
+      ],
+      "tags": [
+        "educatio",
+        "open-source"
+      ]
+    },
+    {
+      "name": "Living World",
+      "slug": "living-world",
+      "website_url": "https://github.com/unaveragetech/living-world",
+      "documentation_url": "https://github.com/unaveragetech/living-world",
+      "repository_url": "https://github.com/unaveragetech/living-world",
+      "creator": "Jesse",
+      "description": "Android app where the user enters a persistent simulated world instead of chatting with an AI that writes a story: characters remember, form opinions, pursue their own goals, gossip, and keep living whether or not the user is around.",
+      "category": [
+        "Games"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://github.com/unaveragetech/living-world",
+        "https://github.com/unaveragetech/living-world"
+      ],
+      "tags": [
+        "games",
+        "open-source"
+      ]
+    },
+    {
+      "name": "Infobroker",
+      "slug": "infobroker",
+      "website_url": "https://github.com/unaveragetech/Infobroker",
+      "documentation_url": "https://github.com/unaveragetech/Infobroker",
+      "repository_url": "https://github.com/unaveragetech/Infobroker",
+      "creator": "Jesse",
+      "description": "Local trading desk: learn chart and risk skills, research US equities, paper trade, then connect free broker APIs when ready.",
+      "category": [
+        "Fi",
+        "a",
+        "ce"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://github.com/unaveragetech/Infobroker",
+        "https://github.com/unaveragetech/Infobroker"
+      ],
+      "tags": [
+        "fi",
+        "a",
+        "ce",
+        "open-source"
+      ]
     }
   ]
 }
