@@ -391,6 +391,36 @@
         "games",
         "open-source"
       ]
+    },
+    {
+      "name": "Copperhead",
+      "slug": "copperhead",
+      "website_url": "https://unaveragetech.github.io/copperhead-rust-puthon",
+      "documentation_url": "https://github.com/unaveragetech/copperhead-rust-puthon",
+      "repository_url": "https://github.com/unaveragetech/copperhead-rust-puthon",
+      "creator": "Jesse",
+      "description": "Python-to-Rust transpilation framework: write Python code and compile it to native Rust binaries that run 10-100x faster, with complete documentation covering every aspect of the framework.",
+      "category": [
+        "Developer Tools"
+      ],
+      "pricing": "free",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-26",
+      "source_urls": [
+        "https://unaveragetech.github.io/copperhead-rust-puthon",
+        "https://github.com/unaveragetech/copperhead-rust-puthon"
+      ],
+      "tags": [
+        "developer-tools",
+        "open-source"
+      ]
     }
   ]
 }
