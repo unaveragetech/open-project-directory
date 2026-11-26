@@ -522,6 +522,11 @@ class GitHubClient:
     def get_issue(self, number):
         return self._request("GET", f"/issues/{number}")
 
+    def list_issues(self, state="open", labels="submitted"):
+        """List issues (used by the sweep to find stuck submissions)."""
+        return self._request(
+            "GET", f"/issues?state={state}&labels={labels}&per_page=100")
+
     def comment_issue(self, number, body):
         return self._request("POST", f"/issues/{number}/comments",
                              {"body": body})
