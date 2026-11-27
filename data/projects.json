@@ -1126,6 +1126,41 @@
         "api",
         "open-source"
       ]
+    },
+    {
+      "name": "Orkas",
+      "slug": "orkas",
+      "website_url": "https://orkas.ai?source=gh_openprojdir",
+      "documentation_url": "https://orkas.ai/docs?lang=en",
+      "repository_url": "https://github.com/Orkas-AI/Orkas",
+      "creator": "Orkas-AI (Orkas project)",
+      "description": "Orkas is a local-first desktop AI workspace for macOS and Windows. It brings model chat, project context, specialized agents and reusable skills into one place. For a weekly project handoff, attach source notes, ask OfficeWorker to assemble a reviewable first draft, and check each claim against the original files before sharing. The desktop core is MIT-licensed. Managed model use and optional hosted services can have separate costs.",
+      "category": [
+        "AI",
+        "Productivity",
+        "Developer Tools"
+      ],
+      "pricing": "freemium",
+      "open_source": true,
+      "platforms": [
+        "web"
+      ],
+      "features": [],
+      "status": "Operational",
+      "https_verified": true,
+      "quality_score": 100,
+      "last_verified": "2026-11-27",
+      "source_urls": [
+        "https://orkas.ai?source=gh_openprojdir",
+        "https://orkas.ai/docs?lang=en"
+      ],
+      "tags": [
+        "ai",
+        "productivity",
+        "developer-tools",
+        "api",
+        "open-source"
+      ]
     }
   ]
 }
